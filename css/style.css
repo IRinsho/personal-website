@@ -1,0 +1,2353 @@
+* {
+   margin: 0;
+   padding: 0;
+   outline: 0;
+}
+
+ul,
+ol {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+li,
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+
+:root {
+   --main-color: #9400EE;
+   --second-color: #ff00d6;
+   /* --second-color: #ff5733; */
+   --text-color: #333;
+   --secound-text-color: #fff;
+   /* --text-color: #F1F8E9; */
+   --hover-color: #ff00d6;
+   --ff1: 'Bebas Neue', sans-serif;
+   --ff2: "Poppins", serif;
+
+}
+
+body {
+   font-family: "Poppins", serif;
+}
+
+/* common css end */
+/* Custom CSS for Dark Mode */
+body.bg-dark .footer::after{
+   display: none;
+}
+body.bg-dark {
+   background-color: #121212 !important;
+   /* Dark background for the body */
+   color: #fff;
+   /* Text color for dark mode */
+}
+
+body.bg-dark header {
+   background-color: #222 !important;
+   /* White background for the header in dark mode */
+   color: #444;
+   /* Text color for the header in dark mode */
+}
+
+body.bg-dark .btn-outline-light {
+   color: #fff !important;
+   /* White text for buttons in dark mode */
+   border-color: #fff;
+   /* White border for buttons */
+}
+
+body.bg-dark .navbar-dark .navbar-nav .nav-link {
+   color: #fff !important;
+   /* White text for navbar links */
+}
+
+/* Specific adjustments to make sure social media icons are visible in dark mode */
+body.bg-dark .fab {
+   color: #fff !important;
+}
+body.bg-dark .main-menu button i{
+   color: #fff !important;
+}
+/* body.bg-dark .particles-js{
+   display: none;
+} */
+body.bg-dark .main-menu{
+   background-color: #222222;
+}
+
+
+#colorSwitcher {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background: #222;
+   padding: 10px;
+   border-radius: 5px;
+   display: none;
+   /* ✅ Start as hidden */
+   z-index: 999;
+   /* ✅ Ensure it's above other elements */
+}
+
+#switcherToggle {
+   background: #ff5733;
+   border: none;
+   color: white;
+   font-size: 24px;
+   cursor: pointer;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#colorOptions {
+   margin-top: 10px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5px;
+}
+
+.color-option {
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   cursor: pointer;
+   border: 2px solid white;
+}
+
+
+
+/* *******************************************
+            header section start
+   ******************************************/
+header {
+   background-color: #f1f1f1;
+}
+
+#darkModeToggle {
+   color: var(--main-color);
+   border: 1px solid var(--main-color);
+}
+
+.search-btn {
+   color: var(--main-color);
+}
+
+.social-icons a i {
+   color: var(--main-color);
+   height: 30px;
+   width: 30px;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 50%;
+   border: 1px solid var(--main-color);
+   margin: 0 5px;
+   transition: all linear 0.3s;
+}
+
+.social-icons a i:hover {
+   background: var(--main-color);
+   color: #fff;
+}
+
+.modal-content {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   color: var(--secound-text-color);
+   pointer-events: auto;
+
+   background-clip: padding-box;
+   /* border: var(--bs-modal-border-width) solid var(--bs-modal-border-color); */
+   border-radius: var(--bs-modal-border-radius);
+   outline: 0;
+   background: var(--main-color);
+}
+#darkModeToggle i{
+   color: var(--main-color) !important;
+}
+#darkModeToggle:hover{
+   background-color: var(--main-color);
+   color: var(--second-color);
+}
+#darkModeToggle:hover i{
+   color: var(--second-color) !important;
+}
+/* *******************************************
+            header section start
+   ******************************************/
+
+/* *******************************************
+            main-menu section start
+   ******************************************/
+.main-menu ul li a {
+   color: var(--main-color);
+   font-size: 14px;
+   font-weight: 800;
+   padding: 10px 15px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   margin-right: 10px;
+}
+
+.main-menu ul li a:hover {
+   color: var(--second-color);
+}
+.main-menu{
+   background-color: #f1f1f1;
+}
+
+/* *******************************************
+            main-menu section start
+   ******************************************/
+
+/* *******************************************
+            banner section start
+   ******************************************/
+
+.carousel-item p {
+   margin-left: 40px;
+   font-size: 18px;
+   font-weight: 600;
+   color: #fff;
+   background: var(--second-color);
+   padding: 8px 15px;
+   width: fit-content;
+   border-radius: 5px;
+}
+
+.carousel-item h2 {
+   font-size: 50px;
+}
+
+.carousel {
+   max-width: 100%;
+   margin: auto;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+   border-radius: 8px;
+}
+
+.carousel-item {
+   text-align: center;
+   padding: 60px 20px;
+   background: #f5f5f5;
+   color: #333;
+}
+
+.progress {
+   height: 5px;
+   background: #ddd;
+}
+
+.progress-bar {
+   height: 100%;
+   background: var(--main-color);
+   transition: width 0.3s;
+}
+
+.carousel-item {
+   position: relative;
+   padding: 250px 80px 37px 0;
+   z-index: 1;
+   text-align: left;
+}
+
+.carousel-item::before {
+   position: absolute;
+   content: "";
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.4);
+   z-index: -1;
+}
+
+.carousel-item h2 {
+   font-size: 2.5em;
+   font-weight: 800;
+   color: var(--secound-text-color);
+   margin-left: 40px;
+   padding-top: 20px;
+   padding-bottom: 8px;
+}
+
+.carousel-item h5 {
+   font-size: 1.5em;
+   font-weight: 600;
+   color: var(--secound-text-color);
+   margin-bottom: 20px;
+   color: var(--main-color);
+   margin-left: 40px;
+}
+
+/* *******************************************
+            banner section start
+   ******************************************/
+
+/* *******************************************
+            marquee section start
+   ******************************************/
+.section-title-border {
+   font-size: 18px;
+   font-weight: bold;
+   background: var(--second-color);
+   padding: 8px 12px;
+   border-radius: 5px;
+   display: inline-block;
+   position: relative;
+   z-index: 2;
+   /* Ensures it stays on top */
+}
+
+/* Adjust marquee position */
+.marquee-container {
+   position: absolute;
+   left: 175px;
+   right: 10px;
+   overflow: hidden;
+   white-space: nowrap;
+   top: 60%;
+   transform: translateY(-50%);
+}
+
+marquee {
+   font-size: 16px;
+   font-weight: bold;
+   color: #fff ;
+   display: block;
+}
+marquee span{
+   color: #fff ;
+}
+
+#latest-news {
+   margin-bottom: 15px;
+}
+
+/* *******************************************
+            marquee section start
+   ******************************************/
+
+/* *******************************************
+            recent section start
+   ******************************************/
+.recent-new-img img {
+   width: 150px;
+   height: 134px;
+   border-radius: 10px 0 0 10px;
+}
+
+.ratings i {
+   color: #ffb80f;
+}
+
+.recent-news-conainer {
+   background-color: var(--main-color);
+   border-radius: 10px;
+   margin-bottom: 14px;
+}
+
+.recent-new-text h3 a {
+   color: var(--secound-text-color);
+   font-size: 16px;
+   font-weight: 600;
+   padding-top: 20px;
+   text-transform: uppercase;
+}
+
+.recent-new-text p {
+   color: var(--secound-text-color);
+   font-size: 14px;
+   font-weight: 400;
+}
+
+.recent-new-text a {
+   color: var(--secound-text-color);
+}
+
+.tags a {
+   color: var(--secound-text-color);
+   font-size: 14px;
+   font-weight: 300;
+}
+
+.tags {
+   padding-bottom: 20px;
+}
+
+.tags a span {
+   font-weight: 600;
+}
+
+.recent-news-inner {
+   height: 413px;
+   overflow-y: scroll;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* WebKit-based browsers (Chrome, Safari, Edge) */
+.recent-news-inner::-webkit-scrollbar {
+   width: 0;
+   /* Hide the scrollbar */
+   background: transparent;
+   /* Optional: Make the track transparent */
+}
+
+.recent-news-inner::-webkit-scrollbar-thumb {
+   background: transparent;
+   /* Hide the scrollbar thumb */
+}
+
+.recent-news-inner::-webkit-scrollbar-track {
+   background: transparent;
+   /* Hide the scrollbar track */
+}
+
+/* Firefox */
+.recent-news-inner {
+   scrollbar-width: none;
+   /* Hide the scrollbar in Firefox */
+}
+
+.recent-news-title h3 {
+   color: var(--main-color);
+   font-size: 20px;
+   font-weight: 600;
+   padding-bottom: 10px 0;
+   -webkit-text-fill-color: #ffffff;
+   -webkit-text-stroke-width: 1.2px;
+   text-transform: uppercase;
+   font-size: 32px;
+   padding-bottom: 10px;
+   position: relative;
+   background: url(../images/lights-9597_512.gif);
+    background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.recent-news-title h3::before {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 2px;
+   background-color: var(--main-color);
+   bottom: 9px;
+   left: 5px;
+}
+
+.recent-news-title h3::after {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 2px;
+   background-color: var(--main-color);
+   bottom: 5px;
+   left: 10px;
+}
+
+/* *******************************************
+            recent section start
+   ******************************************/
+
+/* *******************************************
+            latest manga section start
+   ******************************************/
+#latest-manga {
+   padding: 80px 0;
+}
+.latest-manga-section{
+   padding-bottom: 80px;
+}
+
+.latest-manga-card1 {
+   height: 465px !important;
+}
+
+.latest-manga-card1,
+.latest-manga-card {
+   background-color: var(--main-color);
+   padding: 15px 15px 0 15px;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   transition: transform 0.3s ease-in-out;
+   height: 450px;
+}
+
+.latest-manga-card1:hover,
+.latest-manga-card:hover {
+   transform: scale(1.03);
+}
+
+.manga-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 15px;
+}
+
+.manga-header h3 {
+   margin: 0;
+   /* font-size: 20px; */
+   font-weight: bold;
+}
+
+.filters button {
+   background: none;
+
+   padding: 10px 20px;
+   cursor: pointer;
+   color: var(--secound-text-color);
+   background-color: var(--main-color);
+   font-size: 14px;
+   border: none;
+   font-weight: bold;
+   transition: all linear .3s;
+}
+
+.filters button:hover {
+   background-color: var(--hover-color);
+}
+
+.manga-card {
+   margin-top: 44px;
+}
+
+.manga-card img {
+   border: 3px solid #f1f1f1;
+   height: 280px;
+}
+
+.add-to-cart-btn1 a {
+   color: var(--secound-text-color);
+   background: var(--second-color);
+   padding: 10px 20px;
+   border-radius: 5px;
+   display: inline-block;
+   transition: all linear .3s;
+
+}
+
+.add-to-cart-btn a {
+   color: var(--secound-text-color);
+   background: var(--second-color);
+   padding: 10px 20px;
+   border-radius: 5px;
+   display: inline-block;
+   transition: all linear .3s;
+   opacity: 0;
+}
+
+.latest-manga-card:hover .add-to-cart-btn a {
+   opacity: 1;
+}
+
+/* *******************************************
+            latest manga section start
+   ******************************************/
+
+/* *******************************************
+         bestselling-manga section start
+   ******************************************/
+#bestselling-manga {
+   padding: 80px 0 0 0;
+}
+
+.bestselling-manga-img {
+   position: relative;
+   overflow: hidden;
+   /* Ensure the zoom effect doesn't overflow */
+   display: block;
+}
+
+.bestselling-menga-content {
+   margin-top: 40px;
+}
+
+.bestselling-manga-img img {
+   width: 100%;
+   display: block;
+   transition: transform 0.3s linear;
+   border-radius: 10px;
+}
+
+.bestselling-manga-card {
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bestselling-manga-img::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   transition: opacity 0.3s linear;
+}
+
+.bestselling-manga-text {
+   position: absolute;
+   bottom: -57px;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding: 10px 20px;
+   color: var(--main-color);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   z-index: 999;
+}
+
+.bestselling-manga-card h4 {
+   text-align: left;
+   font-size: 19px;
+   font-weight: 500;
+   color: var(--secound-text-color);
+   background: var(--second-color);
+   width: fit-content;
+   padding: 5px 7px;
+   text-transform: uppercase;
+   border-radius: 5px;
+}
+
+.best-s-btn {
+   position: absolute;
+   bottom: 75px;
+   transition: all linear 0.3s;
+   opacity: 0;
+   color: var(--secound-text-color);
+   font-weight: 400;
+   text-transform: uppercase;
+}
+
+.best-s-btn:hover {
+   color: var(--hover-color);
+}
+
+.bestselling-manga-img:hover .best-s-btn {
+   opacity: 1;
+   bottom: 72px;
+}
+
+.bestselling-manga-img:hover::after {
+   opacity: 1;
+   transition: opacity 0.3s linear;
+}
+
+.bestselling-manga-img:hover img {
+   transform: scale(1.1);
+}
+
+
+/* *******************************************
+         bestselling-manga section start
+   ******************************************/
+
+/* *******************************************
+            watch-online section start
+   ******************************************/
+#watch-online {
+   padding: 80px 0;
+   position: relative;
+   z-index: 1;
+}
+
+#watch-online::before {
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.6);
+   z-index: -1;
+}
+
+/* Video Section */
+.watch-online-video {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Video Thumbnail */
+.watch-online-video img {
+   width: 100%;
+   max-width: 500px;
+   border-radius: 10px;
+   display: block;
+}
+
+/* Play Button */
+.play-button {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 80px;
+   height: 80px;
+   background: rgba(255, 0, 212, 0.815);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   font-size: 30px;
+   cursor: pointer;
+   transition: 0.3s;
+   z-index: 2;
+}
+
+.play-button i {
+   transition: 0.3s;
+}
+
+.play-button:hover {
+   background: rgba(255, 0, 212, 0.486);
+}
+
+.play-button:hover i {
+   transform: scale(1.2);
+}
+
+/* Animated Waves */
+.play-button::before,
+.play-button::after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   background: rgba(255, 0, 212, 0.589);
+   animation: wave-animation 1.5s infinite ease-in-out;
+}
+
+.play-button::after {
+   animation-delay: 0.5s;
+}
+
+@keyframes wave-animation {
+   0% {
+      transform: scale(1);
+      opacity: 1;
+   }
+
+   100% {
+      transform: scale(2);
+      opacity: 0;
+   }
+}
+
+.watch-online-text h4 {
+   color: var(--secound-text-color);
+   font-size: 18px;
+   font-weight: 600;
+   padding-bottom: 10px 0;
+   background-color: var(--second-color);
+   width: fit-content;
+   padding: 5px 7px;
+   text-transform: uppercase;
+   position: relative;
+   border-radius: 5px;
+}
+
+.watch-online-text h2 {
+   color: var(--secound-text-color);
+   font-size: 34px;
+   font-weight: 600;
+   padding: 25px 0;
+   -webkit-text-fill-color: #ffffff;
+   -webkit-text-stroke-width: 1.2px;
+   text-transform: uppercase;
+}
+
+.watch-online-text a {
+   color: var(--secound-text-color);
+   border-radius: 5px;
+   display: inline-block;
+   transition: all linear .3s;
+}
+
+.watch-online-text a:hover {
+   color: var(--hover-color);
+}
+
+.watch-online-text {
+   margin-top: 25%;
+}
+
+/* *******************************************
+            watch-online section start
+   ******************************************/
+
+/* *******************************************
+         trending-manga-slider section start
+   ******************************************/
+.trending-manga-slider {
+   text-align: center;
+   padding: 10px;
+}
+
+.trending-manga-slider img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+.trending-manga-slider .description {
+   font-size: 14px;
+   color: #555;
+   margin-top: 5px;
+}
+
+.trending-manga-slider .rating {
+   color: #f39c12;
+   margin-top: 5px;
+}
+
+.trending-manga-slider .stats {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-top: 10px;
+   font-size: 14px;
+   color: #333;
+}
+
+.trending-manga-slider .stats i {
+   margin-right: 5px;
+}
+
+.slick-next::before,
+.slick-prev::before {
+   color: var(--main-color) !important;
+}
+
+.trending-text h3 a {
+   color: var(--secound-text-color);
+   font-size: 20px;
+   font-weight: 600;
+   padding-bottom: 10px 0;
+   text-transform: uppercase;
+}
+
+.trending-text p {
+   color: var(--secound-text-color);
+   font-size: 14px;
+   font-weight: 400;
+   padding: 5px 0;
+}
+
+.add-cart-btn {
+   margin-top: 8px;
+   border-radius: 5px;
+   background-color: var(--second-color);
+   color: var(--secound-text-color);
+   font-weight: 500;
+   padding: 3px 20px;
+   text-transform: capitalize;
+   transition: all linear .3s;
+}
+
+.add-cart-btn a {
+   color: var(--secound-text-color);
+}
+
+.amount {
+   color: var(--secound-text-color);
+   font-size: 14px;
+   font-weight: 400;
+   padding: 5px 0;
+}
+
+.latest-manga-card1 img {
+   position: relative;
+}
+
+.latest-manga-card1 img::after {
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.3);
+   z-index: 1;
+}
+
+.latest-manga-card1 {
+   position: relative;
+   overflow: hidden;
+}
+
+.hover-icons {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   gap: 10px;
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+}
+
+.hover-icons a {
+   background: var(--second-color);
+   color: #fff;
+   padding: 10px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   font-size: 16px;
+   transition: background 0.3s ease;
+}
+
+.hover-icons a:hover {
+   background: var(--main-color);
+}
+
+.latest-manga-card1:hover .hover-icons {
+   opacity: 1;
+}
+
+.trending-manga-slider-container {
+   margin-top: 40px;
+}
+
+#trending-manga-slider {
+   padding: 40px 0;
+}
+
+/* *******************************************
+         trending-manga-slider section start
+   ******************************************/
+
+/* *******************************************
+         popular-movies section start
+   ******************************************/
+#popular-movies {
+   /* padding-top: 40px; */
+   padding-bottom: 80px;
+}
+
+.popular-movie-content img {
+   height: 200px;
+}
+
+.popular-movie-content {
+   background-color: var(--main-color);
+   padding: 20px;
+   border-radius: 5px;
+}
+
+.popular-movie-content {
+   position: relative;
+   overflow: hidden;
+}
+
+.hover-icons {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   gap: 10px;
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+}
+
+.hover-icons a {
+   background: var(--second-color);
+   color: #fff;
+   padding: 10px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   font-size: 16px;
+   transition: background 0.3s ease;
+}
+
+.hover-icons a:hover {
+   background: var(--main-color);
+}
+
+.popular-movie-content:hover .hover-icons {
+   opacity: 1;
+}
+
+.popular-movie-content h4 a {
+   color: var(--secound-text-color);
+   font-size: 16px;
+   font-weight: 600;
+   padding-bottom: 10px 0;
+   text-transform: uppercase;
+   text-align: center;
+}
+.video-card-img img{
+   height: 266px;
+}
+.popular-movie-content h4 {
+   text-align: center;
+   margin-top: 10px;
+}
+
+.popular-movies-left img {
+   height: 650px;
+   border-radius: 5px;
+}
+
+.popular-movies-content {
+   margin-top: 50px;
+
+}
+
+/* *******************************************
+         popular-movies section start
+   ******************************************/
+
+/* *******************************************
+            blog section start
+   ******************************************/
+
+   .manga-latest-news-blog-card {
+      overflow: hidden;
+      box-shadow: 0px 2px 20px #d7dfe2;
+      background: white;
+      border-radius: 0.5rem;
+      position: relative;
+      transition: 250ms all ease-in-out;
+      cursor: pointer;
+      height: 100%;
+    }
+    
+    .manga-latest-news-blog-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 2px 40px #d7dfe2;
+    }
+    
+    .manga-latest-news-blog-banner-img {
+      object-fit: cover;
+      height: 14rem;
+      width: 100%;
+    }
+    
+    .manga-latest-news-blog-category-tag {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: white;
+      background: red;
+      padding: 0.5rem 1.3rem 0.5rem 1rem;
+      text-transform: uppercase;
+      position: absolute;
+      z-index: 1;
+      top: 1rem;
+      border-radius: 0 2rem 2rem 0;
+    }
+    
+    .manga-latest-news-blog-popular {
+      background: #ef257a;
+    }
+    
+    .manga-latest-news-blog-technology {
+      background: #651fff;
+    }
+    
+    .manga-latest-news-blog-psychology {
+      background: #e85808;
+    }
+    .manga-latest-news-blog-psychology1 {
+      background: #08b4e8;
+    }
+    
+    .manga-latest-news-blog-card-body {
+      padding: 1rem;
+      background-color: var(--main-color);
+    }
+    
+    .manga-latest-news-blog-blog-hashtag {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--secound-text-color);
+    }
+    
+    .manga-latest-news-blog-blog-title {
+      font-weight: 600;
+      font-size: 20px;
+      margin: 1rem 0 0.5rem;
+      color: var(--secound-text-color);
+    }
+    
+    .manga-latest-news-blog-blog-description {
+      color: var(--secound-text-color);
+      opacity: .7;
+      font-size: 0.9rem;
+    }
+    
+    .manga-latest-news-blog-card-profile {
+      display: flex;
+      margin-top: 2rem;
+      align-items: center;
+      color: var(--secound-text-color);
+    }
+    
+    .manga-latest-news-blog-profile-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    
+    .manga-latest-news-blog-card-profile-info {
+      margin-left: 1rem;
+    }
+    
+    .manga-latest-news-blog-profile-name {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    
+    .manga-latest-news-blog-profile-followers {
+      color: var(--secound-text-color-color);
+      font-size: 0.9rem;
+    }
+    #blog{
+      padding-bottom: 80px;
+    }
+/* *******************************************
+            blog section start
+   ******************************************/
+
+/* *******************************************
+         newslatter section start
+   ******************************************/
+.form-subscribe {
+   max-width: 600px;
+   margin: 0 auto
+}
+
+.form-subscribe .form-control {
+   background-color: hsla(0, 0%, 100%, .8);
+   padding-left: 24px;
+   padding-right: 24px;
+   letter-spacing: 1px;
+   border: none;
+   border-top-left-radius: 36px;
+   border-bottom-left-radius: 36px
+}
+
+.form-subscribe .form-control.focus,
+.form-subscribe .form-control:focus {
+   z-index: 2;
+   background-color: hsla(0, 0%, 100%, .8)
+}
+
+.form-subscribe .btn {
+   border-top-right-radius: 36px;
+   border-bottom-right-radius: 36px;
+   background: #7ec855;
+   border-color: #7ec855;
+   height: 46.5px;
+}
+
+/* *******************************************
+         newslatter section end
+   ******************************************/
+
+
+/* *******************************************
+            footer section start
+   ******************************************/
+.footer {
+   background-color: var(--main-color);
+   padding-top: 70px;
+   padding-bottom: 30px;
+   position: relative;
+   overflow: hidden;
+   z-index: 999999999999999999;
+   /* Prevents overflow */
+}
+
+/* Existing footer top design */
+.footer::after {
+   content: '';
+   width: 100%;
+   height: 20px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   background-repeat: repeat-x;
+   background: url('../images/section_notch_top.png');
+}
+
+/* New animated shape */
+/* .footer::before {
+   content: '';
+   width: 5px;
+   height: 2px;
+   background-color: var(--second-color);
+   position: absolute;
+   top: 18px;
+   left: 0;
+   animation: moveShape 10s linear infinite alternate;
+   z-index: 9999999;
+}
+
+@keyframes moveShape {
+   0% {
+      left: 0;
+   }
+
+   100% {
+      left: 100%;
+   }
+} */
+
+.copyright-section {
+   padding-top: 20px;
+   margin-top: 50px;
+   border-top: 1px solid #fff;
+}
+
+.credit p {
+   color: var(--secound-text-color);
+}
+
+.credit p a {
+   color: var(--secound-color);
+}
+
+.footer-col {
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer-col h4 {
+   font-size: 18px;
+   color: #ffffff;
+   text-transform: capitalize;
+   margin-bottom: 35px;
+   font-weight: 500;
+   position: relative;
+}
+
+.footer-col h4::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   background-color: #ffffff;
+   height: 2px;
+   box-sizing: border-box;
+   width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+   margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+   font-size: 16px;
+   text-transform: capitalize;
+   color: #ffffff;
+   text-decoration: none;
+   font-weight: 300;
+   display: block;
+   transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+   color: #ffffff;
+   padding-left: 8px;
+}
+
+.footer-col .social-links a {
+   display: inline-block;
+   height: 40px;
+   width: 40px;
+   background-color: rgba(255, 255, 255, 0.2);
+   margin: 0 10px 10px 0;
+   text-align: center;
+   line-height: 40px;
+   border-radius: 50%;
+   color: #ffffff;
+   transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+   color: #fff;
+   background-color: var(--second-color);
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+   .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+   }
+}
+
+@media(max-width: 574px) {
+   .footer-col {
+      width: 100%;
+   }
+}
+
+.company-description {
+   color: #ffffff;
+   font-size: 16px;
+   margin-top: 30px;
+   line-height: 30px;
+}
+
+
+.newsletter {
+   display: flex;
+   align-items: center;
+   border: 1px solid #ccc;
+   border-radius: 25px;
+   overflow: hidden;
+   width: 300px;
+   background: #fff;
+}
+
+.newsletter button {
+   background: var(--main-color);
+   border: none;
+   padding: 10px 15px;
+   cursor: pointer;
+   color: white;
+   border-top-left-radius: 25px;
+   border-bottom-left-radius: 25px;
+}
+
+.newsletter button i {
+   font-size: 16px;
+}
+
+.newsletter input {
+   flex: 1;
+   border: none;
+   padding: 10px;
+   outline: none;
+}
+
+.product-info ul {
+   border-bottom: 1px solid #ccc;
+}
+
+/* *******************************************
+               footer section end
+    ******************************************/
+
+/* *******************************************
+               breadcrumb section end
+    ******************************************/
+    .manga-single-info li {
+       padding-bottom: 10px;
+      }
+      .breadcrumb ul{
+         padding: 15px;
+         background-color: #f1f1f1;
+         border-radius: 5px;
+      }
+      .breadcrumb ul li a{
+         color: var(--main-color);
+         font-size: 14px;
+         font-weight: 800;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         margin-right: 5px;
+      }
+      .breadcrumb ul li .active{
+         color: var(--second-color);
+         margin-left: 5px;
+      }
+/* *******************************************
+               breadcrumb section end
+    ******************************************/
+
+/* *******************************************
+         manga-single-product section end
+    ******************************************/
+.product-image img {
+   width: 100%;
+   border-radius: 10px;
+   transition: transform 0.3s;
+   cursor: pointer;
+}
+
+.product-image img:hover {
+   transform: scale(1.2);
+}
+
+.thumbnail img {
+   width: 80px;
+   height: 80px;
+   object-fit: cover;
+   border: 2px solid transparent;
+   border-radius: 8px;
+   margin: 5px;
+   cursor: pointer;
+   transition: transform 0.3s, border-color 0.3s;
+}
+
+.thumbnail img:hover {
+   transform: scale(1.1);
+   border-color: var(--main-color);
+}
+
+.thumbnail.active img {
+   border-color: var(--main-color);
+}
+
+.product-info h1 {
+   font-weight: bold;
+   font-size: 2rem;
+}
+
+.price {
+   font-size: 28px;
+   font-weight: bold;
+   color: #333;
+}
+
+.discount {
+   color: var(--main-color);
+   margin-left: 10px;
+   font-size: 18px;
+}
+
+.old-price {
+   text-decoration: line-through;
+   color: grey;
+   font-size: 16px;
+}
+
+.btn-cart{
+   background-color: var(--main-color);
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   display: inline-block;
+   transition: all linear .3s;
+   border: none;
+}
+.btn-cart:hover{
+   background-color: var(--second-color);
+}
+.wishlist-btn{
+   background-color: var(--second-color);
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   display: inline-block;
+   transition: all linear .3s;
+   border: none;
+}
+.wishlist-btn:hover{
+   background-color: var(--main-color);
+}
+.product-info span{
+   color: var(--main-color);
+}
+.cart-sidebar {
+   position: fixed;
+   top: 0;
+   right: -350px;
+   width: 300px;
+   height: 100%;
+   background-color: #fff;
+   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+   transition: right 0.3s;
+   padding: 20px;
+   overflow-y: auto;
+   z-index: 1050;
+}
+
+.cart-sidebar.open {
+   right: 0;
+}
+
+.cart-sidebar h3 {
+   margin-bottom: 20px;
+}
+
+.cart-sidebar .cart-item {
+   border-bottom: 1px solid #ddd;
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+}
+
+.cart-sidebar .cart-item img {
+   width: 50px;
+   height: 50px;
+   object-fit: cover;
+   border-radius: 8px;
+   margin-right: 10px;
+}
+
+/* *******************************************
+         manga-single-product section end
+    ******************************************/
+
+/* *******************************************
+         chapter section end
+    ******************************************/
+    .latest-releases {
+      margin: 20px 0;
+  }
+  .sidebar h2,
+  .latest-releases h2 {
+      color: var(--main-color);
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+  .chapter-list {
+      max-height: 200px;
+      overflow-y: auto;
+  }
+  .chapter-list .list-group-item {
+      transition: background-color 0.3s;
+  }
+  .chapter-list .list-group-item:hover {
+      background-color: var(--main-color);
+      color: #fff;
+      cursor: pointer;
+  }
+  .chapter-list .list-group-item a{
+      color: #000;
+  }
+  .chapter-list .list-group-item:hover a{
+      color: #fff !important;
+  }
+  .comments-section {
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+  }
+  .comments-section h3 {
+      font-weight: bold;
+  }
+  .comment img {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   margin-right: 10px;
+}
+.comment { 
+   display: flex;
+   align-items: center;
+}
+.comment-content {
+   flex: 1;
+}
+.leave-reply form textarea,
+.leave-reply form input{
+   padding: 10px;
+   border-radius: 0;
+}
+.form-control:focus {
+	border-color: var(--main-color);
+	box-shadow: none;
+}
+.leave-reply{
+   margin-top: 50px;
+}
+/* *******************************************
+         chapter section end
+    ******************************************/
+/* chapter page */
+/* *******************************************
+         chapter section end
+    ******************************************/
+    /* #chapter-section{
+      padding: 80px 0;
+    } */
+    .chapter-section{
+      padding-top: 20px;
+      padding-bottom: 80px;
+    }
+    .chapter-btns i{
+      font-size: 20px;
+      color: var(--main-color);
+      cursor: pointer;
+      transition: all linear .3s;
+      margin: 0 5px;
+    }
+    .chapter-btns i:hover{
+      color: var(--second-color);
+    }
+    .chapter-title h4{
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--main-color);
+      margin-bottom: 20px;
+    }
+    .chapter-filter select{
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background: var(--main-color);
+      color: var(--secound-text-color);
+      font-weight: 500;
+      cursor: pointer;
+      width: 80%;
+    }
+   .submit-btn,
+   .next-prev-btn a,
+   .capter-next-page-btn a{
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      transition: all linear .3s;
+      background: var(--main-color);
+      color: var(--secound-text-color);
+      font-weight: 500;
+   }
+   .submit-btn:hover,
+   .next-prev-btn a:hover,
+   .capter-next-page-btn a:hover{
+      background: var(--second-color);
+   }
+   .chapter-deatiles-content{
+      border: 1px solid #ddd;
+   }
+   
+/* *******************************************
+         chapter section end
+    ******************************************/
+
+/* *******************************************
+         manga-single-product section end
+    ******************************************/
+/* *******************************************
+         manga-single-product section end
+    ******************************************/
+
+    .recent-news-title1 p ,
+    .latest-news-title p ,
+    .popular-movies-title p ,
+    .trending-manga-title p ,
+    .latest-manga-title p ,
+    .best-selling-manga p {
+      position: relative;
+    }
+    
+    .best-selling-manga p::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -65px;
+      width: 120px;
+      height: 120px;
+      border: 25px solid #d1d1d1;
+      z-index: -1;
+      border-radius: 50%;
+      animation: upDown 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(15px);
+      }
+    }
+    
+    .latest-manga-title p::before {
+      position: absolute;
+      content: '';
+      top: 955px;
+      right: -749px;
+      width: 120px;
+      height: 120px;
+      border: 17px solid #d1d1d1;
+      z-index: -1;
+      border-radius: 5%;
+      animation: upDown 2s ease-in-out infinite alternate;
+   }
+    
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(15px);
+      }
+    }
+    .trending-manga-title p::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -65px;
+      width: 120px;
+      height: 120px;
+      border: 25px solid #d1d1d1;
+      z-index: -1;
+      border-radius: 50%;
+      animation: upDown 2s ease-in-out infinite alternate;
+   }
+    
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(15px);
+      }
+    }
+    .popular-movies-title p::before {
+      position: absolute;
+      content: '';
+      top: 630px;
+      right: -60px;
+      width: 120px;
+      height: 120px;
+      border: 17px solid #d1d1d1;
+      z-index: -1;
+      border-radius: 5%;
+      animation: upDown 2s ease-in-out infinite alternate;
+   }
+    
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(15px);
+      }    
+    }
+    .latest-news-title p::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -65px;
+      width: 120px;
+      height: 120px;
+      border: 25px solid #d1d1d1;
+      z-index: -1;
+      border-radius: 50%;
+      animation: upDown 2s ease-in-out infinite alternate;
+   }
+    
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(15px);
+      }
+    }
+
+    .popular-movies-content-before{
+      position: relative;
+    }
+
+    .popular-movies-content-before::before {
+      position: absolute;
+      content: '';
+      top: 565px;
+      left: 1225px;
+      width: 120px;
+      height: 120px;
+      border: 17px solid #d1d1d1;
+      z-index: -1;
+      border-radius: 5%;
+      animation: upDown 2s ease-in-out infinite alternate;
+   }
+    
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(15px);    
+      }
+    }
+    .recent-news-title1 p::before {
+         position: absolute;
+         content: '';
+         top: 328px;
+         left: 352px;
+         width: 120px;
+         height: 120px;
+         border: 17px solid #d1d1d1;
+         z-index: -1;
+         border-radius: 5%;
+         animation: upDown 2s ease-in-out infinite alternate;
+      }
+   
+    
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(15px);    
+      }
+    }
+
+/* full body animation */
+body{
+   direction: ltr;
+   position: relative;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   transition: all 0.25s ease-in-out 0s;
+ }
+ .particles-js {
+   position: fixed; /* Change absolute to fixed */
+   width: 100%;
+   height: 100vh; /* Ensure it takes the full viewport height */
+   top: 0;
+   left: 0;
+   pointer-events: none;
+   z-index: -1; /* Lower z-index if necessary */
+}
+
+/* full body animation */
+    /* Enable Hover Dropdown for Large Devices */
+    @media (min-width: 992px) {
+      .navbar-nav .dropdown:hover > .dropdown-menu {
+          display: block;
+          margin-top: 0;
+      }
+  }
+
+
+  /* video page */
+  .video-card-img {
+   position: relative;
+   overflow: hidden;
+}
+
+/* Play Button */
+.video-play-icon {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 60px;
+   height: 60px;
+   background-color: var(--main-color);
+   color: white;
+   font-size: 24px;
+   border-radius: 50%;
+   text-decoration: none;
+   z-index: 2;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Wave Effect */
+.video-play-icon::before,
+.video-play-icon::after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: rgba(102, 31, 255, 0.781);
+   border-radius: 50%;
+   z-index: -1;
+   opacity: 0;
+   animation: wave-animation 1.5s infinite ease-out;
+}
+
+.video-play-icon::after {
+   animation-delay: 0.75s;
+}
+
+/* Keyframes for Wave */
+@keyframes wave-animation {
+   0% {
+       transform: scale(1);
+       opacity: 0.8;
+   }
+   100% {
+       transform: scale(2.5);
+       opacity: 0;
+   }
+}
+.video-card-items{
+   background-color: var(--main-color);
+   padding: 20px;
+   border-radius: 10px;
+   transition: all linear .3s;
+}
+.video-card-items:hover{
+   transform: scale(1.03);
+}
+
+.video-social-icon{
+   display: flex;
+   justify-content: space-between;
+   
+}
+.video-social-icon a{
+   color: var(--secound-text-color);
+   padding: 5px 0;
+}
+.video-card-title{
+   font-size: 20px;
+   font-weight: 600;
+   color: var(--secound-text-color);
+}
+.video-card-date{
+   color: #f1f1f1;
+   padding-top: 5px;
+}
+#video-fantasy{
+   padding: 80px 0;
+}
+#video-romance{
+   padding-top: 50px;
+   padding-bottom: 80px;
+}
+#video-drama{
+   padding-bottom: 80px;
+}
+  /* video page */
+
+  /* video single page */
+  .video-single-meta span i{
+   /* color: var(--main-color); */
+   padding:0 5px;
+  }
+  .video-single-meta span a{
+   color: #333;
+  }
+  .video-single-meta{
+   padding: 10px 0;
+  }
+  #videoTitle{
+   padding-top: 15px !important;
+  }
+  #videoPlayer{
+   border-radius: 5px;
+  }
+  #episodeList{
+   height: 200px;
+   overflow-y: scroll;
+  }
+  .resent-video-post-item-thumb img{
+   width: 120px !important;
+   margin-right: 10px;
+   border-radius: 5px 0 0 5px;
+  }
+  .resent-video-post-item{
+   border: 1px solid #ddd;
+   background-color: #f1f1f1;
+   margin-bottom: 24px;
+   border-radius: 5px;
+  }
+  .resent-video-post-item-content h5 a{
+   color: var(--main-color);
+   font-weight: 600;
+   padding-bottom: 5px;
+   /*! font-size: 20px; */
+  }
+  .resent-video-post-item-content span a{
+   color: #333;
+  }
+  .resent-video-post-item-content span{
+   font-size: 13px;
+  }
+  .social-media-follow li a i{
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+   background-color: var(--main-color);
+   color: #fff;
+   font-size: 18px;
+   margin-right: 10px;
+  }
+  .social-media-follow li a{
+   margin-bottom: 10px;
+   color: #000;
+   font-weight: 700;
+   font-size: 26px;
+  }
+
+  .follow-btn {
+   width: 60px;
+   height: 60px;
+   margin: 20px;
+   outline: none;
+   border: none;
+   background: #d6d6d6;
+   box-shadow: 5px 5px 10px #b6a9a9, -5px -5px 10px #ffffff;
+   border-radius: 50%;
+   transition: 0.2;
+ }
+ 
+ .follow-btn:hover {
+   cursor: pointer;
+   animation-name: pulse;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+ }
+ @keyframes pulse {
+   from {
+     transform: scale(1);
+   }
+   50% {
+     transform: scale(1.21);
+   }
+   to {
+     transform: scale(1);
+   }
+ }
+ .blog-single ,
+ .video-single {
+   border: 1px solid #ddd;
+   padding: 20px;
+   border-radius: 5px;
+   margin: 40px 0;
+ }
+ .single-vodeo-sidebar .search-box form input{
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   outline: none;
+   background-color: #f1f1f1;
+   width: 100%;
+ }
+ .single-vodeo-sidebar{
+   margin: 40px 0;
+   border: 1px solid #ddd;
+   padding: 20px;
+   border-radius: 5px;
+ }
+ .video-single-list-item{
+   padding: 20px ;
+
+ }
+ .video-single-list-item li{
+   padding-bottom: 10px;
+ }
+ #episodeList li{
+   transition: all linear .3s;
+ }
+   #episodeList li:hover{
+      background-color: var(--main-color);
+      color: #fff;
+      cursor: pointer;
+   }
+   .list-group-item-active{
+      background-color: var(--main-color);
+      color: #fff;
+   }
+   .marquee-container marquee{
+      border-right: 1px solid #ddd;
+   }
+   .dropdown-item:focus, .dropdown-item:hover {
+      color: #fff !important;
+      background-color: var(--main-color) !important;
+      border-left: 5px solid var(--second-color);
+      transition: all linear .3s;
+   }
+   .dropdown-menu{
+      border-top: 5px solid var(--main-color);
+   }
+   .tag-list li a,
+   .category-list li a{
+      padding: 9px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      background-color: var(--main-color);
+      border-radius: 5px;
+      color: var(--secound-text-color);
+   }
+  /* video single page */
+
+  /* blog single page */
+  .blog-single-content h3{
+   font-size: 28px;
+   font-weight: 600;
+   color: var(--main-color);
+   padding-bottom: 10px;
+   padding-top: 20px;
+  }
+  .comment-item{
+   border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  }
+  .blog-single-img img{
+   border-radius: 5px;
+  }
+  .blog-single-meta{
+   padding: 10px 0;
+  }
+  /* blog single page */
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, #ff00d6, #651fff);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, transform 0.3s;
+  }
+
+  #backToTop.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      z-index: 1;
+  }
+
+  #backToTop:hover {
+      transform: scale(1.1);
+  }
+  .advertisement-img img{
+   border-radius: 5px;
+  }
+
+  /* circle box */
+  .circles-box {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   z-index: -1;
+ }
+ 
+ .circles-box li {
+   position: absolute;
+   display: block;
+   list-style: none;
+   width: 20px;
+   height: 20px;
+   background: rgba(255, 255, 255, 0.2);
+   animation: animate 25s linear infinite;
+   bottom: -150px;
+ 
+ }
+ 
+ .circles-box li:nth-child(1) {
+   left: 25%;
+   width: 80px;
+   height: 80px;
+   animation-delay: 0s;
+ }
+ 
+ 
+ .circles-box li:nth-child(2) {
+   left: 10%;
+   width: 20px;
+   height: 20px;
+   animation-delay: 2s;
+   animation-duration: 12s;
+ }
+ 
+ .circles-box li:nth-child(3) {
+   left: 70%;
+   width: 20px;
+   height: 20px;
+   animation-delay: 4s;
+ }
+ 
+ .circles-box li:nth-child(4) {
+   left: 40%;
+   width: 60px;
+   height: 60px;
+   animation-delay: 0s;
+   animation-duration: 18s;
+ }
+ 
+ .circles-box li:nth-child(5) {
+   left: 65%;
+   width: 20px;
+   height: 20px;
+   animation-delay: 0s;
+ }
+ 
+ .circles-box li:nth-child(6) {
+   left: 75%;
+   width: 110px;
+   height: 110px;
+   animation-delay: 3s;
+ }
+ 
+ .circles-box li:nth-child(7) {
+   left: 35%;
+   width: 150px;
+   height: 150px;
+   animation-delay: 7s;
+ }
+ 
+ .circles-box li:nth-child(8) {
+   left: 50%;
+   width: 25px;
+   height: 25px;
+   animation-delay: 15s;
+   animation-duration: 45s;
+ }
+ 
+ .circles-box li:nth-child(9) {
+   left: 20%;
+   width: 15px;
+   height: 15px;
+   animation-delay: 2s;
+   animation-duration: 35s;
+ }
+ 
+ .circles-box li:nth-child(10) {
+   left: 85%;
+   width: 150px;
+   height: 150px;
+   animation-delay: 0s;
+   animation-duration: 11s;
+ }
+ 
+ 
+ 
+ @keyframes animate {
+ 
+   0% {
+     transform: translateY(0) rotate(0deg);
+     opacity: 1;
+     border-radius: 0;
+   }
+ 
+   100% {
+     transform: translateY(-1000px) rotate(720deg);
+     opacity: 0;
+     border-radius: 50%;
+   }
+ 
+ }
+  /* circle box */
+/* Preloader Styles */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 2;
+}
+
+/* Rotating circle */
+.spinner {
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* serarch btn */
+#searchBtn{
+   background: var(--hover-color);
+   border: none;
+}
+
+.marquee-container {
+    overflow: hidden;
+    /* position: relative; */
+    white-space: nowrap;
+}
+
+.marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+    color: var(--secound-text-color);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

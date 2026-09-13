@@ -1,0 +1,360 @@
+@media (min-width: 1400px) {
+  
+}
+
+@media(min-width: 1200px) and (max-width: 1399.98px) {
+   .popular-movies-content-before::before {
+	left: 1028px;
+}
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .recent-news-title1 p::before {
+	position: absolute;
+	content: '';
+	top: 328px;
+	left: 200px;
+	width: 120px;
+	height: 120px;
+}
+.latest-manga-title p::before {
+	position: absolute;
+	content: '';
+	top: 955px;
+	right: -559px;
+	width: 120px;
+	height: 119px;
+}
+.popular-movies-title p::before {
+	position: absolute;
+	content: '';
+	top: 686px;
+	right: -30px;
+	width: 120px;
+	height: 120px;
+	border: 17px solid #d1d1d1;
+	z-index: -1;
+	border-radius: 5%;
+	animation: upDown 2s ease-in-out infinite alternate;
+}
+}
+
+
+@media(min-width: 992px) and (max-width: 1199.98px) {
+
+.latest-manga-card1, .latest-manga-card {
+	height: 504px !important;
+}
+.popular-movies-content-before::before {
+	top: 607px;
+	left: 835px;
+}
+.newsletter {
+	width: 236px;
+}
+.footer-col .social-links a {
+	margin: 0 9px 10px 0;
+}
+.latest-manga-title p::before {
+	top: 1067px;
+	right: -544px;
+}
+.popular-movies-title p::before {
+	right: -20px;
+}
+}
+
+@media(min-width: 768px) and (max-width: 991.98px) {
+    
+    .bestselling-manga-img:hover .best-s-btn {
+        bottom: 100px;
+    }
+    .bestselling-manga-card h4 {
+        font-size: 15px;
+    }
+    .tags a {
+        font-size: 12px;
+    }
+    .latest-manga-card1, .latest-manga-card {
+        height: 470px;
+    }
+
+    .newsletter {
+        width: 189px;
+    }
+    .popular-movies-left img {
+       display: none;
+    }
+    .latest-manga-title p::before {
+	top: 987px;
+	right: -430px;
+}
+.popular-movies-title p::before {
+	top: 948px;
+	right: -20px;
+}
+.margn{
+    margin-top: 24px;
+}
+.trending-text h3 a {
+	font-size: 17px;
+	padding-top: 10px;
+}
+.latest-manga-card1 {
+	height: 482px !important;
+}
+.popular-movies-content-before::before {
+	top: 565px;
+	left: 606px;
+}
+.cus-margin{
+    margin-top: 24px;
+}
+.company-description {
+	color: #ffffff;
+	font-size: 13px;
+	line-height: 27px;
+}
+.blog-single-content h3 {
+	font-size: 22px;
+}
+.recent-news-title h4 {
+	font-size: 26px !important;
+}
+.resent-video-post-item-content h5 a {
+	font-size: 12px !important;
+}
+.instagram-feed-item{
+    width: 50%;
+}
+.credit p {
+	font-size: 14px;
+}
+.tag-list li a, .category-list li a {
+	padding: 8px;
+	font-size: 14px;
+}
+.resent-video-post-item-thumb img {
+	width: 100px !important;
+}
+.video-card-items {
+	margin-bottom: 24px;
+}
+}
+
+@media(min-width: 576px) and (max-width: 767.98px) {
+    .latest-manga-card1 {
+	height: 478px !important;
+}
+    .recent-news-title1 p::before {
+	top: 360px;
+	left: 406px;
+}
+.popular-movies-title p::before {
+	display: none;
+}
+.manga-latest-news-blog-card {
+	margin-bottom: 24px;
+}
+.popular-movies-content-before::before {
+	display: none;
+}
+.video-card-items{
+    margin-bottom: 24px;
+}
+.video-card-img img {
+	height: 350px;
+}
+.form-group{
+    margin-bottom: 16px;
+}
+    .latest-manga-title p::before {
+        display: none;
+    }
+    .mobile-btn-search{
+        color: #9400EE;
+        border: 1px solid #9400EE;
+      }
+      .carousel-item h2 {
+        font-size: 1.5em;
+    }
+    .recent-news-title{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .tags a {
+        font-size: 13px;
+    }
+    #bestselling-manga {
+        padding: 60px 0 0 0;
+    }
+    .bestselling-manga-card {
+        padding-bottom: 24px;
+    }
+    .manga-header {
+        display: block !important;
+    }
+    .filters button {
+        padding: 10px 18px;
+        margin-top: 24px;
+    }
+    .watch-online-text h2 {
+        font-size: 26px;
+    }
+    .watch-online-text {
+        margin-top: 2%;
+    }
+    .watch-online-video{
+        margin-top: 24px;
+    }
+    .slick-next {
+        right: -3px;
+    }
+    .slick-prev {
+        left: -3px;
+    }
+    .popular-movies-left img {
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 24px;
+    }
+    .popular-movie-content{
+        margin-bottom: 24px;
+    }
+    .copyright-section {
+        display: block !important;
+    }
+    .popular-movie-content img {
+        height: 370px;
+    }
+    .newsletter {
+        width: 260px;
+    }
+    .chapter-filter select {
+	width: 100%;
+}
+.capter-next-page-btn{
+    text-align: left ! important;
+    margin-top: 24px;
+}
+.likeandcomment-item{
+    margin-top: 15px;
+}
+}
+
+@media (max-width: 575.98px) {
+.latest-manga-card1 {
+	height: 478px !important;
+	/* padding-bottom: 46px; */
+}
+  .mobile-btn-search{
+    color: #9400EE;
+    border: 1px solid #9400EE;
+  }
+  .carousel-item h2 {
+	font-size: 1.5em;
+}
+.recent-news-title{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.tags a {
+	font-size: 13px;
+}
+#bestselling-manga {
+	padding: 60px 0 0 0;
+}
+.bestselling-manga-card {
+    padding-bottom: 24px;
+}
+.manga-header {
+	display: block !important;
+}
+.filters button {
+	padding: 10px 18px;
+	margin-top: 24px;
+}
+.watch-online-text h2 {
+	font-size: 26px;
+}
+.watch-online-text {
+	margin-top: 2%;
+}
+.watch-online-video{
+    margin-top: 24px;
+}
+.slick-next {
+	right: -3px;
+}
+.slick-prev {
+	left: -3px;
+}
+.popular-movies-left img {
+	height: auto;
+	border-radius: 5px;
+	margin-bottom: 24px;
+}
+.popular-movie-content{
+    margin-bottom: 24px;
+}
+.copyright-section {
+	display: block !important;
+}
+.popular-movies-title p,
+.trending-manga-title p,
+.latest-manga-title p,
+.recent-news-title1 p,
+.best-selling-manga p{
+    display: none;
+}
+.fdsa{
+    margin-top: 24px;
+}
+.credit p {
+	font-size: 13px;
+    padding-bottom: 14px;
+}
+#latest-manga {
+	padding-top: 40px;
+}
+#trending-manga-slider {
+	padding: 0;
+}
+.popular-movie-content img {
+	height: 300px;
+}
+#popular-movies {
+	/* padding-top: 40px; */
+	padding-bottom: 40px;
+}
+.manga-breadcrumb{
+    display: none;
+}
+.wishlist-btn {
+	padding: 8px 14px;
+}
+.sadfss{
+    margin-top: 14px;
+}
+.submit-btn{
+    margin-bottom: 24px;
+}
+.capter-next-page-btn{
+    display: none;
+}
+
+.popular-movies-content-before::before{
+    display: none;
+}
+.video-card-items{
+    margin-bottom: 24px;
+}
+.next-prev-btn a{
+	padding: 10px 13px;
+}
+.chapter-filter select {
+	width: 100%;
+}
+.breadcrumb ul li a {
+	font-size: 12px;
+}
+}
