@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Blog - Manganic</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/fav.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.bootcdn.net/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- venobox -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/venobox/2.1.8/venobox.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="spinner"></div>
+            <img src="images/fav.png" alt="Logo" class="logo" />
+        </div>
+    </div>
+    <div class="particles-js dots" id="particles-js"></div>
+    <!-- Header -->
+    <header class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <button id="darkModeToggle" class="btn btn-outline-light"><i class="fas fa-moon"></i></button>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- add section -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="add-content d-flex justify-content-between align-items-center">
+                        <div class="logos">
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <div class="add-img">
+                            <img src="images/add.jpg" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- add section -->
+    <!--  Navbar with Offcanvas for Small Devices -->
+    <nav class="navbar navbar-expand-md main-menu">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="btn btn-outline-light d-lg-none ms-2 mobile-btn-search" data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+                <i class="fas fa-search"></i>
+            </button>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start bg-dark text-white" id="offcanvasMenu">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="genres.html">Genres</a></li>
+                        <li class="nav-item"><a class="nav-link" href="latest_manga.html">Latest Manga</a></li>
+
+                        <!-- Video Dropdown Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="videoDropdown" role="button">
+                                Video
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="videoDropdown">
+                                <li><a class="dropdown-item" href="video.html">All Videos</a></li>
+                                <li><a class="dropdown-item" href="video-single.html">Video Single</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Blog Dropdown Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button">
+                                Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                                <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Login/Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="search-btn btn btn-outline-light ms-auto d-none d-lg-block" data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+                <i class="fas fa-search"></i> Search Manga
+            </button>
+        </div>
+    </nav>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-modal="true"
+        aria-labelledby="searchModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Search Manga</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="searchInput" class="form-label visually-hidden">
+                            Search Manga
+                        </label>
+                        <input type="text" class="form-control" id="searchInput" placeholder="Search manga..."
+                            autofocus>
+                    </div>
+
+                    <button type="button" id="searchBtn" class="btn btn-primary w-100">
+                        Search
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Login / Sign Up Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-modal="true"
+        aria-labelledby="loginModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login / Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form class="row g-3" novalidate>
+
+                        <div class="col-12">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password"
+                                required>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="wishlist-btn w-100">
+                                Sign in
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- *********************************************
+                latest news section start
+    ********************************************** -->
+    <section id="latest-news" style="background:#9400EE; padding:10px 0; position:relative;">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-2">
+                    <div class="section-title-border text-white">
+                        <span>Latest News</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <div class="marquee-container">
+                        <div class="marquee">
+                            <span>Breaking News: Your latest updates go here... Stay tuned for more updates.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *********************************************
+                latest news section start
+    ********************************************** -->
+
+    <!-- *********************************************
+            breadcrumb section start
+    ********************************************** -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb">
+                        <ul class="d-flex justify-content-center align-items-center">
+                            <li><a href="index.html">Home </a> / </li>
+                            <li><a class="active" href="blog-single.html">Blog Single</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- *********************************************
+            breadcrumb section end
+    ********************************************** -->
+
+    <!-- *********************************************
+                blog-single section start
+    ********************************************** -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-7">
+                    <div class="blog-single">
+                        <div class="blog-single-img">
+                            <img src="images/blog/single_blog_2.png" class="img-fluid w-100" alt="">
+                        </div>
+                        <div class="blog-single-content">
+                            <h3>Genshin Impact version 3.5 update ‘Windblume’s Breath’ launches March 1</h3>
+                            <p class="blog-single-meta">
+                                <span><i class="fas fa-user"></i> Admin</span>
+                                <span><i class="fas fa-calendar-alt"></i> 12th June 2026</span>
+                                <span><i class="fas fa-comments"></i> 5 Comments</span>
+                            </p>
+                            <p>
+                                Manga is a Japanese term that can be translated as "comic"; Historically, the term has
+                                also been used in a broader sense to describe all comic books, and in some contexts, it
+                                can refer to American comic books. In Japan, people of all ages read manga. The medium
+                                includes works in a broad range of genres: action-adventure, romance, sports and games,
+                                historical drama, comedy, science fiction and fantasy, mystery, horror, sexuality, and
+                                business/commerce, among others. Since the 1950s, manga has steadily become a major part
+                                of the Japanese publishing industry, representing a ¥481 billion market in Japan in 2005
+                                (approximately $4.5 billion) and ¥1.4 billion ($13.5 million) in the United States in
+                                2006.
+                            </p>
+                            <p class="mb-4 mt-4">
+                                <b>Manga stories are typically</b> printed in black-and-white—due to time constraints,
+                                artistic reasons (as colouring could lessen the impact of the artwork) and to keep
+                                printing costs low—although some full-colour manga exist (e.g., Colorful). In Japan,
+                                manga are usually serialized in large manga magazines, often containing many stories,
+                                each presented in a single episode to be continued in the next issue. If the series is
+                                successful, collected chapters may be republished in tankōbon volumes, frequently but
+                                not exclusively, paperback books. A manga artist (mangaka in Japanese) typically works
+                                with a few assistants in a small studio and is associated with a creative editor from a
+                                commercial publishing company.
+                            </p>
+                            <p>
+                                If a manga series is popular enough, it may be animated after or even during its run.
+                                Sometimes manga are drawn centering on previously existing live-action or animated
+                                films. Manga-influenced comics, among original works, exist in other parts of the world,
+                                particularly in Algeria ("DZ-manga"), China, Hong Kong, Taiwan ("manhua"),
+                            </p>
+                        </div>
+
+                        <!-- demo comment list -->
+                        <div class="comment-list">
+                            <div class="recent-news-title mb-4 mt-4">
+                                <h3>Recent Comments</h3>
+                            </div>
+
+                            <div class="comment-item">
+                                <div class="comment-item-thumb d-flex align-items-center gap-3">
+                                    <img src="images/social_post1.png" alt="">
+                                    <div class="comment-them">
+                                        <h5>John Doe</h5>
+                                        <span>January 1, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="comment-item-content pt-1">
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas hic voluptates
+                                        ea doloremque cumque maiores! Suscipit, quae reiciendis cum voluptatem doloribus
+                                        blanditiis, laborum, iure doloremque aliquam tempora maiores necessitatibus
+                                        labore!</p>
+                                </div>
+                                <!-- like and reply -->
+                                <div class="likeandcomment-item">
+                                    <div class="likeandcomment-item-thumb d-flex align-items-center gap-3">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <i class="fas fa-thumbs-down"></i>
+                                        <i class="fas fa-reply"></i>
+                                    </div>
+                                </div>
+                                <!-- like and reply -->
+                            </div>
+                            <div class="comment-item mt-4">
+                                <div class="comment-item-thumb d-flex align-items-center gap-3">
+                                    <img src="images/social_post1.png" alt="">
+                                    <div class="comment-them">
+                                        <h5>John Doe</h5>
+                                        <span>January 1, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="comment-item-content pt-1">
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas hic voluptates
+                                        ea doloremque cumque maiores! Suscipit, quae reiciendis cum voluptatem doloribus
+                                        blanditiis, laborum, iure doloremque aliquam tempora maiores necessitatibus
+                                        labore!</p>
+                                </div>
+                                <!-- like and reply -->
+                                <div class="likeandcomment-item">
+                                    <div class="likeandcomment-item-thumb d-flex align-items-center gap-3">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <i class="fas fa-thumbs-down"></i>
+                                        <i class="fas fa-reply"></i>
+                                    </div>
+                                </div>
+                                <!-- like and reply -->
+                            </div>
+                            <div class="comment-item mt-4">
+                                <div class="comment-item-thumb d-flex align-items-center gap-3">
+                                    <img src="images/social_post1.png" alt="">
+                                    <div class="comment-them">
+                                        <h5>John Doe</h5>
+                                        <span>January 1, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="comment-item-content pt-1">
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas hic voluptates
+                                        ea doloremque cumque maiores! Suscipit, quae reiciendis cum voluptatem doloribus
+                                        blanditiis, laborum, iure doloremque aliquam tempora maiores necessitatibus
+                                        labore!</p>
+                                </div>
+                                <!-- like and reply -->
+                                <div class="likeandcomment-item">
+                                    <div class="likeandcomment-item-thumb d-flex align-items-center gap-3">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <i class="fas fa-thumbs-down"></i>
+                                        <i class="fas fa-reply"></i>
+                                    </div>
+                                </div>
+                                <!-- like and reply -->
+                            </div>
+
+
+                        </div>
+
+                        <!-- demo comment list -->
+                        <!-- comment form -->
+                        <div class="comment-form">
+                            <div class="recent-news-title mb-4 mt-4">
+                                <h3>Leave a Comment</h3>
+                            </div>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group
+                                ">
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 mt-3">
+                                        <div class="form-group
+                                ">
+                                            <textarea class="form-control" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 mt-3">
+                                        <button type="submit" class="wishlist-btn">Post Comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- comment form -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="single-vodeo-sidebar">
+                        <div class="search-box">
+                            <form action="#">
+                                <input type="text" placeholder="Search...">
+                            </form>
+                        </div>
+                        <!-- category -->
+                        <div class="category">
+                            <div class="recent-news-title mb-4 mt-4">
+                                <h3>Category</h3>
+                            </div>
+                            <ul class="category-list d-flex flex-wrap">
+                                <li><a href="#">Action(5)</a></li>
+                                <li><a href="#">Adventure (10)</a></li>
+                                <li><a href="#">Comedy (2)</a></li>
+                                <li><a href="#">Drama (1)</a></li>
+                                <li><a href="#">Fantasy (6)</a></li>
+                                <li><a href="#">Horror (2)</a></li>
+                                <li><a href="#">Mystery (10)</a></li>
+                                <li><a href="#">Romance (1)</a></li>
+                                <li><a href="#">Thriller (2)</a></li>
+                            </ul>
+                        </div>
+                        <!-- category -->
+                        <div class="resent-video-post">
+                            <div class="recent-news-title mb-4 mt-4">
+                                <h3>recent post</h3>
+                            </div>
+                            <div class="resent-video-post-list">
+                                <div class="resent-video-post-item d-flex align-items-center">
+                                    <div class="resent-video-post-item-thumb">
+                                        <img src="images/bestsellingmanga/01.jpg" alt="">
+                                    </div>
+                                    <div class="resent-video-post-item-content">
+                                        <h5><a href="video-single.html">Chained Soldier, Vol. 10</a></h5>
+                                        <span> <i class="fas fa-calendar"></i> January 1, 2026 <i
+                                                class="fas fa-user"></i> <a href="#">Admin</a></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="resent-video-post-list">
+                                <div class="resent-video-post-item d-flex align-items-center">
+                                    <div class="resent-video-post-item-thumb">
+                                        <img src="images/bestsellingmanga/02.jpg" alt="">
+                                    </div>
+                                    <div class="resent-video-post-item-content">
+                                        <h5><a href="video-single.html">One Piece Episode 1000</a></h5>
+                                        <span> <i class="fas fa-calendar"></i> January 1, 2026 <i
+                                                class="fas fa-user"></i> <a href="#">Admin</a></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="resent-video-post-list">
+                                <div class="resent-video-post-item d-flex align-items-center">
+                                    <div class="resent-video-post-item-thumb">
+                                        <img src="images/bestsellingmanga/03.jpg" alt="">
+                                    </div>
+                                    <div class="resent-video-post-item-content">
+                                        <h5><a href="video-single.html">The Boy in the All-Girls School Episode 1</a>
+                                        </h5>
+                                        <span> <i class="fas fa-calendar"></i> January 1, 2026 <i
+                                                class="fas fa-user"></i> <a href="#">Admin</a></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="resent-video-post-list">
+                                <div class="resent-video-post-item d-flex align-items-center">
+                                    <div class="resent-video-post-item-thumb">
+                                        <img src="images/bestsellingmanga/04.jpg" alt="">
+                                    </div>
+                                    <div class="resent-video-post-item-content">
+                                        <h5><a href="video-single.html">Shishunki na Adame Episode 1</a></h5>
+                                        <span> <i class="fas fa-calendar"></i> January 1, 2026 <i
+                                                class="fas fa-user"></i> <a href="#">Admin</a></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- tag -->
+                        <div class="tag">
+                            <div class="recent-news-title mb-4 mt-4">
+                                <h3>Tag</h3>
+                            </div>
+                            <ul class="tag-list d-flex flex-wrap">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Adventure</a></li>
+                                <li><a href="#">Comedy</a></li>
+                                <li><a href="#">Drama</a></li>
+                                <li><a href="#">Fantasy</a></li>
+                                <li><a href="#">Horror</a></li>
+                                <li><a href="#">Mystery</a></li>
+                                <li><a href="#">Romance</a></li>
+                                <li><a href="#">Thriller</a></li>
+                            </ul>
+                        </div>
+                        <!-- tag -->
+                        <!-- Instagram gallery feed -->
+                        <div class="instagram-feed">
+                            <div class="recent-news-title mb-4 mt-4">
+                                <h3>Instagram Feed</h3>
+                            </div>
+                            <div class="instagram-feed-list d-flex flex-wrap justify-content-between">
+                                <div class="instagram-feed-item">
+                                    <img class="img-fluid w-100" src="images/social_post1.png" alt="">
+                                </div>
+                                <div class="instagram-feed-item">
+                                    <img class="img-fluid w-100" src="images/01.jpg" alt="">
+                                </div>
+                                <div class="instagram-feed-item">
+                                    <img class="img-fluid w-100" src="images/02.jpg" alt="">
+                                </div>
+                                <div class="instagram-feed-item">
+                                    <img class="img-fluid w-100" src="images/03.jpg" alt="">
+                                </div>
+                                <div class="instagram-feed-item">
+                                    <img class="img-fluid w-100" src="images/05.png" alt="">
+                                </div>
+                                <div class="instagram-feed-item">
+                                    <img class="img-fluid w-100" src="images/02.jpg" alt="">
+                                </div>
+                                <div class="instagram-feed-item">
+                                    <img class="img-fluid w-100" src="images/social_post1.png" alt="">
+                                </div>
+                                <div class="instagram-feed-item">
+                                    <img class="img-fluid w-100" src="images/05.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Instagram gallery feed -->
+                        <div class="follow-social-media">
+                            <div class="recent-news-title mb-4 mt-4">
+                                <h3>Follow Us</h3>
+                            </div>
+                            <button class="follow-btn">
+                                <i class="fa-brands fa-facebook-f" style="font-size:35px;"></i>
+                            </button>
+                            <button class="follow-btn">
+                                <i class="fa-brands fa-instagram" style="font-size:35px;"></i>
+                            </button>
+                            <button class="follow-btn">
+                                <i class="fa-brands fa-x-twitter" style="font-size:35px;"></i>
+                            </button>
+                            <button class="follow-btn">
+                                <i class="fa-brands fa-youtube" style="font-size:35px;"></i>
+                            </button>
+                            <button class="follow-btn">
+                                <i class="fa-brands fa-linkedin-in" style="font-size:35px;"></i>
+                            </button>
+                            <button class="follow-btn">
+                                <i class="fa-brands fa-tiktok" style="font-size:35px;"></i>
+                            </button>
+                        </div>
+                        <!-- advertisement -->
+                        <div class="advertisement-img mt-4">
+                            <img class="img-fluid w-100" src="images/news_card.jpg" alt="">
+                        </div>
+                        <!-- advertisement -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- *********************************************
+                blog-single section end
+    ********************************************** -->
+
+
+    <!-- *********************************************
+                footer section start
+    ********************************************** -->
+    <footer class="footer">
+        <ul class="circles-box">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+
+                    <a href="#"><img src="images/footer-logo.png" class="img-fluid w-100" alt=""></a>
+                    <p class="company-description mt-4">
+                        Manga is a Japanese term that can be translated as "comic"; Historically, the term has also been
+                        used in a broader sense to describe all comic books, and in some contexts, it can refer to
+                        American comic books.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="#">A to Z List</a></li>
+                        <li><a href="#">Upcoming</a></li>
+                        <li><a href="#">Most Popular</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <form class="newsletter form-group mb-4" method="POST" action="subscribe.php">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                    </form>
+
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="copyright-section d-flex justify-content-between">
+                    <div class="credit">
+                        <p>Copyright © 2026 All Rights Reserved. <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
+                    </div>
+                    <div class="payment">
+                        <img src="images/payments.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- *********************************************
+                footer section end
+    ********************************************** -->
+    <button id="backToTop">&#8679;</button>
+    <!--  JavaScript Files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/venobox/2.1.8/venobox.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchBtn = document.getElementById('searchBtn');
+            const searchInput = document.getElementById('searchInput');
+
+            function performSearch() {
+                const query = searchInput.value.trim().toLowerCase();
+                if (!query) {
+                    alert("Please enter something to search.");
+                    return;
+                }
+
+                // Find all elements that contain the search text
+                const allElements = document.querySelectorAll("body *:not(script):not(style)");
+                let foundElement = null;
+
+                allElements.forEach(el => {
+                    if (!foundElement && el.children.length === 0) { // only leaf nodes
+                        if (el.textContent.toLowerCase().includes(query)) {
+                            foundElement = el;
+                        }
+                    }
+                });
+
+                if (foundElement) {
+                    foundElement.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+                    foundElement.style.backgroundColor = "yellow"; // highlight
+                    setTimeout(() => {
+                        foundElement.style.backgroundColor = "";
+                    }, 2000);
+                } else {
+                    alert("❌ Not Found");
+                }
+
+                // Close modal after search
+                const modal = bootstrap.Modal.getInstance(document.getElementById('searchModal'));
+                if (modal) modal.hide();
+            }
+
+            // Click search
+            searchBtn.addEventListener('click', performSearch);
+
+            // Enter key search
+            searchInput.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

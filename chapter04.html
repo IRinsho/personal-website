@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter04 - Manganic</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/fav.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.bootcdn.net/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- venobox -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/venobox/2.1.8/venobox.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="spinner"></div>
+            <img src="images/fav.png" alt="Logo" class="logo" />
+        </div>
+    </div>
+    <div class="particles-js dots" id="particles-js"></div>
+    <!-- Header -->
+    <header class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <button id="darkModeToggle" class="btn btn-outline-light"><i class="fas fa-moon"></i></button>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- add section -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="add-content d-flex justify-content-between align-items-center">
+                        <div class="logos">
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <div class="add-img">
+                            <img src="images/add.jpg" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- add section -->
+    <!--  Navbar with Offcanvas for Small Devices -->
+    <nav class="navbar navbar-expand-md main-menu">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="btn btn-outline-light d-lg-none ms-2 mobile-btn-search" data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+                <i class="fas fa-search"></i>
+            </button>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start bg-dark text-white" id="offcanvasMenu">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="genres.html">Genres</a></li>
+                        <li class="nav-item"><a class="nav-link" href="latest_manga.html">Latest Manga</a></li>
+
+                        <!-- Video Dropdown Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="videoDropdown" role="button">
+                                Video
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="videoDropdown">
+                                <li><a class="dropdown-item" href="video.html">All Videos</a></li>
+                                <li><a class="dropdown-item" href="video-single.html">Video Single</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Blog Dropdown Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button">
+                                Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                                <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Login/Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="search-btn btn btn-outline-light ms-auto d-none d-lg-block" data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+                <i class="fas fa-search"></i> Search Manga
+            </button>
+        </div>
+    </nav>
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-modal="true"
+        aria-labelledby="searchModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Search Manga</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="searchInput" class="form-label visually-hidden">
+                            Search Manga
+                        </label>
+                        <input type="text" class="form-control" id="searchInput" placeholder="Search manga..."
+                            autofocus>
+                    </div>
+
+                    <button type="button" id="searchBtn" class="btn btn-primary w-100">
+                        Search
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Login / Sign Up Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-modal="true"
+        aria-labelledby="loginModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login / Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form class="row g-3" novalidate>
+
+                        <div class="col-12">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password"
+                                required>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="wishlist-btn w-100">
+                                Sign in
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************
+                latest news section start
+    ********************************************** -->
+    <section id="latest-news" style="background:#9400EE; padding:10px 0; position:relative;">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-2">
+                    <div class="section-title-border text-white">
+                        <span>Latest News</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <div class="marquee-container">
+                        <div class="marquee">
+                            <span>Breaking News: Your latest updates go here... Stay tuned for more updates.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *********************************************
+                latest news section start
+    ********************************************** -->
+
+    <!-- *********************************************
+            breadcrumb section start
+    ********************************************** -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb">
+                        <ul class="d-flex justify-content-center align-items-center">
+                            <li><a href="index.html">Home </a> / </li>
+                            <li><a class="" href="chapter04.html">Chapter 04</a> /</li>
+                            <li><a class="active" href="chapter04.html">Shishunki na Adam</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- *********************************************
+            breadcrumb section end
+    ********************************************** -->
+
+    <!-- *********************************************
+            chapter section start
+    ********************************************** -->
+
+    <section class="chapter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="chatper-content d-flex justify-content-between align-items-center">
+                        <div class="chapter-title">
+                            <h4>Girls Over Power (Shishunki na Adam)-chapter-4</h4>
+                        </div>
+                        <div class="chapter-btns">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-bookmark"></i>
+                            <i class="fa-regular fa-share-from-square"></i>
+
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <div class="chapter-filter">
+                                <select id="chapterDropdown">
+
+                                    <option value="chapter.html">Chapter 1</option>
+                                    <option value="chapter02.html">Chapter 2</option>
+                                    <option value="chapter03.html">Chapter 3</option>
+                                    <option value="chapter04.html">Chapter 4</option>
+                                    <option value="chapter05.html">Chapter 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="capter-next-page-btn text-end">
+                                <a href="chapter05.html">Next Page <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- *********************************************
+            chapter section end
+    ********************************************** -->
+
+
+    <!-- *********************************************
+            chapter-details section start
+    ********************************************** -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="chapter-deatiles-content">
+                        <img src="images/chapter/chapter-2-02.jpg" class="img-fluid w-100" alt="">
+                        <img src="images/chapter/02.png" class="img-fluid w-100" alt="">
+                        <img src="images/chapter/03.png" class="img-fluid w-100" alt="">
+                    </div>
+                    <div class="next-prev-btn d-flex justify-content-between align-items-center mt-4 mb-4">
+                        <a href="chapter.html" class="prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous Chapter
+                        </a>
+                        <a href="chapter05.html" class="next-btn">Next Chapter <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- *********************************************
+            chapter-details section end
+    ********************************************** -->
+
+
+    <!-- *********************************************
+        comment section start
+    ********************************************** -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="comments-section">
+                        <h3>12 Comments</h3>
+                        <div class="comment mb-3">
+                            <img src="images/rony.jpg" alt="User Image">
+                            <div class="comment-content">
+                                <strong>Jerome Leonard</strong>
+                                <p>I'm usually an anime-only type person but watching the first 3 episodes of this show
+                                    made me read the manga its actually amazing.</p>
+                                <button class="btn btn-outline-secondary btn-sm">Like</button>
+                                <button class="btn btn-outline-secondary btn-sm">Reply</button>
+                            </div>
+                        </div>
+                        <div class="comment mb-3">
+                            <img src="images/rony.jpg" alt="User Image">
+                            <div class="comment-content">
+                                <strong>Theodore Adkins</strong>
+                                <p>Loved this chapter! Can't wait for the next one.</p>
+                                <button class="btn btn-outline-secondary btn-sm">Like</button>
+                                <button class="btn btn-outline-secondary btn-sm">Reply</button>
+                            </div>
+                        </div>
+                        <div class="comment mb-3">
+                            <img src="images/rony.jpg" alt="User Image">
+                            <div class="comment-content">
+                                <strong>Theodore Adkins</strong>
+                                <p>Loved this chapter! Can't wait for the next one.</p>
+                                <button class="btn btn-outline-secondary btn-sm">Like</button>
+                                <button class="btn btn-outline-secondary btn-sm">Reply</button>
+                            </div>
+                        </div>
+                        <div class="leave-reply ">
+                            <div class="recent-news-title mb-4">
+                                <h4>Leave a Reply</h4>
+                            </div>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="Enter your email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comment" class="form-label">Comment</label>
+                                    <textarea class="form-control" id="comment" rows="3"
+                                        placeholder="Write your comment here" required></textarea>
+                                </div>
+
+                                <button class="submit-btn">Submit Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar mb-4 mt-4">
+                        <img src="images/news_card.jpg" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- *********************************************
+            comment section end
+        ********************************************** -->
+
+
+
+    <!-- *********************************************
+                footer section start
+    ********************************************** -->
+    <footer class="footer">
+        <ul class="circles-box">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+
+                    <a href="#"><img src="images/footer-logo.png" class="img-fluid w-100" alt=""></a>
+                    <p class="company-description mt-4">
+                        Manga is a Japanese term that can be translated as "comic"; Historically, the term has also been
+                        used in a broader sense to describe all comic books, and in some contexts, it can refer to
+                        American comic books.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="#">A to Z List</a></li>
+                        <li><a href="#">Upcoming</a></li>
+                        <li><a href="#">Most Popular</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <form class="newsletter form-group mb-4" method="POST" action="subscribe.php">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                    </form>
+
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="copyright-section d-flex justify-content-between">
+                    <div class="credit">
+                        <p>Copyright © 2026 All Rights Reserved. <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
+                    </div>
+                    <div class="payment">
+                        <img src="images/payments.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- *********************************************
+                footer section end
+    ********************************************** -->
+    <button id="backToTop">&#8679;</button>
+    <!--  JavaScript Files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/venobox/2.1.8/venobox.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Get the current page URL
+        const currentPage = window.location.pathname.split('/').pop();
+
+        // Set the dropdown value to match the current page
+        const dropdown = document.getElementById('chapterDropdown');
+        dropdown.value = currentPage;
+
+        // Handle dropdown change to navigate to the selected chapter
+        dropdown.addEventListener('change', function () {
+            const url = this.value;
+            if (url) {
+                window.location.href = url; // Redirect to the selected chapter page
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchBtn = document.getElementById('searchBtn');
+            const searchInput = document.getElementById('searchInput');
+
+            function performSearch() {
+                const query = searchInput.value.trim().toLowerCase();
+                if (!query) {
+                    alert("Please enter something to search.");
+                    return;
+                }
+
+                // Find all elements that contain the search text
+                const allElements = document.querySelectorAll("body *:not(script):not(style)");
+                let foundElement = null;
+
+                allElements.forEach(el => {
+                    if (!foundElement && el.children.length === 0) { // only leaf nodes
+                        if (el.textContent.toLowerCase().includes(query)) {
+                            foundElement = el;
+                        }
+                    }
+                });
+
+                if (foundElement) {
+                    foundElement.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+                    foundElement.style.backgroundColor = "yellow"; // highlight
+                    setTimeout(() => {
+                        foundElement.style.backgroundColor = "";
+                    }, 2000);
+                } else {
+                    alert("❌ Not Found");
+                }
+
+                // Close modal after search
+                const modal = bootstrap.Modal.getInstance(document.getElementById('searchModal'));
+                if (modal) modal.hide();
+            }
+
+            // Click search
+            searchBtn.addEventListener('click', performSearch);
+
+            // Enter key search
+            searchInput.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
